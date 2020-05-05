@@ -31,7 +31,7 @@ class Header extends Component {
     }
     render() {
         return (
-            <Navbar bg="dark" variant="dark" expand="lg">
+            <Navbar bg="dark" variant="dark" sticky="top" expand="lg" className="purpleBackground" >
             <Navbar.Brand href="#home">
             <img
                 src="images/android-chrome-192x192.png"
@@ -46,14 +46,14 @@ class Header extends Component {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
                 <NavLink className="navlink" to="/">Home</NavLink>
-                <NavLink className="navlink" to="/">Link</NavLink>
+                <NavLink className="navlink" to="/other">Other</NavLink>
                 </Nav>
                 <Nav>
                 <Padding>
-                    <Button variant="info" onClick={this.openLoginModal}>Sign In</Button>
+                    <Button className="mybutton" variant="outline-warning" onClick={this.openLoginModal}>Sign In</Button>
                 </Padding>
                 <Padding>
-                    <Button variant="info" onClick={this.openSignUpModal}>Sign Up</Button>
+                    <Button  className="mybutton" variant="outline-warning" onClick={this.openSignUpModal}>Sign Up</Button>
                 </Padding>
                 </Nav>
             </Navbar.Collapse>
